@@ -15,11 +15,14 @@ export const INITIAL_CHECKLIST: TodoItem[] = [
 
 export const ITINERARY_DATA: Record<string, DayPlan> = {
   day1: {
-    title: "Day 1 - 抵達東京",
+    title: "Day 1 - 新宿",
     spots: [
-      { time: "14:00", location: "成田/羽田機場抵達", description: "辦理入境手續，領取行李並購買交通票券。", category: "transport" },
-      { time: "16:30", location: "新宿飯店 Check-in", description: "放下行李，稍作休息，準備開始探索之旅。", category: "transport" },
-      { time: "19:00", location: "歌舞伎町/思出橫丁", description: "體驗東京霓虹夜生活，在居酒屋享用美味串燒。", category: "food" },
+      { time: "14:10", location: "抵達成田國際機場", description: "順利抵達日本！辦理入境手續並提取行李。", category: "transport" },
+      { time: "15:30", location: "NEX 買車票到新宿", description: "購買 Narita Express (NEX) 車票，準備前往熱鬧的新宿市區。", category: "transport" },
+      { time: "18:00", location: "抵達新宿", description: "抵達新宿車站，前往酒店 Check-in 或寄放行李。", category: "transport" },
+      { time: "18:00-20:00", location: "晚餐", description: "在新宿周邊尋找美味的日本料理作為第一頓晚餐。", category: "food" },
+      { time: "20:00", location: "AALIYA COFFEE ROASTERS", description: "品嚐極具名氣的法式吐司與香醇咖啡，享受悠閒時光。", category: "food" },
+      { time: "20:30", location: "GU / Uniqlo", description: "巡禮日本國民服飾品牌，採購簡約質感的服飾。", category: "shopping" },
     ]
   },
   day2: {
