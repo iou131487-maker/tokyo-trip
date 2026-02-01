@@ -1,6 +1,5 @@
-
 import React, { useState } from 'react';
-import { TodoItem } from '../types.ts';
+import { TodoItem } from '../types';
 
 interface PreparationProps {
   items: TodoItem[];
@@ -44,7 +43,7 @@ const Preparation: React.FC<PreparationProps> = ({ items, toggleItem, addItem, d
           onChange={(e) => setNewItemCategory(e.target.value)}
           className="bg-white border-2 border-[#e6dec9] rounded-full px-5 py-3 text-gray-700 outline-none font-bold"
         >
-          {['必備證件', '網路通訊', '3C用品', '個人藥品', '衣物', '其他'].map(cat => (
+          {['必備證件', '網路通訊', '3C用品', '個人藥品', '其他'].map(cat => (
             <option key={cat} value={cat}>{cat}</option>
           ))}
         </select>

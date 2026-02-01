@@ -1,4 +1,3 @@
-
 import { DayPlan, TodoItem } from './types';
 
 export const INITIAL_CHECKLIST: TodoItem[] = [
@@ -20,8 +19,6 @@ export const INITIAL_CHECKLIST: TodoItem[] = [
   { id: '8-7', text: '膠布', completed: false, category: '個人藥品' },
   { id: '8-8', text: '消毒紙', completed: false, category: '個人藥品' },
   { id: '8-9', text: '眼藥水', completed: false, category: '個人藥品' },
-  { id: '9', text: '保暖衣物 (富士山區較涼)', completed: false, category: '衣物' },
-  { id: '10', text: '舒適的走路鞋', completed: false, category: '衣物' },
   { id: '13', text: '安排機場接送', completed: false, category: '其他' },
 ];
 

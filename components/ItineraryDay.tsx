@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { DayPlan } from '../types.ts';
+import { DayPlan } from '../types';
 
 interface ItineraryDayProps {
   day: string;
