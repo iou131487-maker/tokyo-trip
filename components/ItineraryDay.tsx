@@ -10,20 +10,30 @@ interface ItineraryDayProps {
 const getSmartIcon = (location: string, category: string) => {
   const text = (location + category).toLowerCase();
   
-  // 優先判斷具體地點與交通工具
+  // 優先判斷特定關鍵字以匹配使用者要求的 icon
+  if (text.includes('水果')) return '🍎';
+  if (text.includes('aaliya')) return '🍞';
+  if (text.includes('築地')) return '🍣';
+  if (text.includes('啤酒')) return '🍺';
+  if (text.includes('餺飥')) return '🍜';
+  if (text.includes('今半')) return '🍲';
+  if (text.includes('檸檬') || text.includes('牛舌') || text.includes('牛たん')) return '🐮';
+  if (text.includes('flipper') || text.includes('pancake') || text.includes('鬆餅')) return '🥞';
+  if (text.includes('提案') || text.includes('午餐') || text.includes('晚餐')) return '🍴';
+  
+  // 交通工具與特殊活動
   if (text.includes('花火') || text.includes('煙火')) return '🎆';
-  if (text.includes('還車') || text.includes('返却')) return '🏁';
+  if (text.includes('還車') || text.includes('返却')) return '🚗';
   if (text.includes('自駕') || text.includes('用車') || text.includes('租車') || text.includes('開車') || text.includes('toyota')) return '🚗';
   if (text.includes('nex') || text.includes('成田快線') || text.includes('新宿') || text.includes('澀谷') || text.includes('東京站') || text.includes('車站') || text.includes('地鐵') || text.includes('鐵路') || text.includes('jr')) return '🚉';
   if (text.includes('機場') || text.includes('空港') || text.includes('成田') || text.includes('羽田') || (text.includes('抵達') && !text.includes('站'))) return '✈️';
   if (text.includes('公車') || text.includes('巴士') || text.includes('接駁') || text.includes('乘車')) return '🚌';
   
-  // 生活與活動
+  // 生活與景點
   if (text.includes('飯店') || text.includes('酒店') || text.includes('check-in') || text.includes('入住') || text.includes('住宿') || text.includes('checkout')) return '🏨';
-  if (text.includes('flipper') || text.includes('pancake') || text.includes('鬆餅')) return '🥞';
   if (text.includes('cafe') || text.includes('咖啡')) return '☕';
   if (text.includes('鳥貴族') || text.includes('居酒屋')) return '🍢';
-  if (text.includes('壽司') || text.includes('拉麵') || text.includes('燒肉') || text.includes('晚餐') || text.includes('早餐') || text.includes('午餐') || text.includes('下午茶') || text.includes('美食') || text.includes('餺飪')) return '🍣';
+  if (text.includes('壽司') || text.includes('拉麵') || text.includes('燒肉') || text.includes('美食')) return '🍣';
   if (text.includes('富士山') || text.includes('河口湖') || text.includes('風景') || text.includes('展望') || text.includes('相機') || text.includes('大石公園') || text.includes('回廊')) return '🗻';
   if (text.includes('冰雕') || text.includes('雪')) return '❄️';
   if (text.includes('outlet') || text.includes('採買') || text.includes('購物') || text.includes('supermarket') || text.includes('超市') || text.includes('藥妝') || text.includes('手信') || text.includes('伴手禮')) return '🛍️';
@@ -33,7 +43,7 @@ const getSmartIcon = (location: string, category: string) => {
   
   // 根據分類回退
   switch (category) {
-    case 'food': return '🥞';
+    case 'food': return '🍴';
     case 'view': return '🎐';
     case 'shopping': return '🛍️';
     case 'transport': return '🚌';
