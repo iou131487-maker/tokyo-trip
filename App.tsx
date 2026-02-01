@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { GoogleGenAI } from "@google/genai";
 import { TabType, TodoItem, TabConfig } from './types';
 import { INITIAL_CHECKLIST, ITINERARY_DATA } from './constants';
@@ -10,6 +10,11 @@ const App: React.FC = () => {
   const [checklist, setChecklist] = useState<TodoItem[]>(INITIAL_CHECKLIST);
   const [aiTip, setAiTip] = useState<string | null>(null);
   const [isAiLoading, setIsAiLoading] = useState(false);
+
+  // 當切換分頁時，自動捲動到頁面最頂端
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [activeTab]);
 
   const fetchAiAdvice = async (dayKey: string) => {
     if (dayKey === 'prep') return;
