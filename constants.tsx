@@ -29,7 +29,7 @@ export const ITINERARY_DATA: Record<string, DayPlan> = {
     title: "Day2 - 築地及啤酒廠",
     spots: [
       { time: "08:00-12:00", location: "築地市場、豐洲 千客萬來", description: "探索東京廚房，品嚐新鮮海鮮與漫步千客萬來江戶造景。", category: "food" },
-      { time: "14:30-16:30", location: "三得利啤酒廠", description: "預約參觀啤酒工廠，了解釀造細節並品嚐現泡新鮮生乳啤酒。", category: "view" },
+      { time: "14:30-16:30", location: "三得利啤酒廠", description: "預約參觀啤酒工廠，了解釀造細節並品嚐現泡新鮮生啤。", category: "view" },
       { time: "18:00", location: "新宿水果放題", description: "在新宿享受日本當季水果吃到飽，補充維他命！", category: "food" },
       { time: "20:00-21:30", location: "天下壽司(池袋店)", description: "池袋在地人氣名店，高 CP 值的美味迴轉壽司。", category: "food" },
     ]
